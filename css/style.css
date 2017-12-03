@@ -1,0 +1,881 @@
+@import "normalize.css";
+@import "grid.css";
+
+@font-face { 
+font-family: "ff-tisa-web-pro"; 
+font-style: italic; 
+font-weight: 400; 
+src: url("https://use.typekit.com/af/a2dca8/000000000000000000017080/27/l?subset_id=2&fvd=i4&v=3") format("woff2"), 
+url("https://use.typekit.com/af/a2dca8/000000000000000000017080/27/l?subset_id=2&fvd=i4&v=3") format("woff"), 
+url("https://use.typekit.com/af/a2dca8/000000000000000000017080/27/l?subset_id=2&fvd=i4&v=3") format("opentype"); 
+}
+
+@font-face { 
+font-family: "ff-tisa-web-pro"; 
+font-style: normal; 
+font-weight: 400; 
+src: url("https://use.typekit.com/af/a1d110/000000000000000000017087/27/l?subset_id=2&fvd=n4&v=3") format("woff2"), 
+url("https://use.typekit.com/af/a1d110/000000000000000000017087/27/l?subset_id=2&fvd=n4&v=3") format("woff"), 
+url("https://use.typekit.com/af/a1d110/000000000000000000017087/27/l?subset_id=2&fvd=n4&v=3") format("opentype"); 
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+	margin: 0 auto;
+    padding: 50px 48px 0;
+    line-height: 1;
+    color: #333;
+    background: #FFF;
+    font-family: ff-tisa-web-pro, Georgia, sans-serif;
+}
+
+.wrap {
+	width: 920px;
+	height: 100%;
+	position: relative;
+		margin: 0 auto;
+}
+
+/*---------LINKS----------*/
+
+a, a:link, a:visited {
+	text-decoration: none;
+	color: #34AC98;
+}
+a:hover, a:focus { color: #EC6635; }
+
+.content a {
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;  
+   	     -o-transition: all .2s ease;  
+        	transition: all .2s ease; 
+}
+
+/* ---------HEADER-------- */
+
+.header {
+	box-sizing: border-box;
+}
+
+h1#logo {
+	margin-top: 0;
+	margin-bottom: 45px;
+	display: block;
+	width: 120px;
+	height: 120px;
+	text-indent: -999em;
+	background: url(../images/food_sense_logo.png) no-repeat 0 0;
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+h1#logo a {
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+h1#logo:hover {
+	opacity: .85;
+}
+
+/* ---------LEFT MENU-------- */
+.navmenu {
+	width: 160px;
+}
+.navmenu li {
+	display: block;
+	margin-bottom: 18px;
+	line-height: 1.3em;
+}
+.navmenu li:last-child {
+	margin: 0;
+}
+
+.navmenu a {
+	color: #60BEAE;
+	display: block;
+	height: 28px;
+	padding: 4px 0 0 44px;
+	font-style: italic;
+	color: #222;
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease;
+}
+
+.navmenu li a { 
+	background-position: 0 65%; 
+	background-repeat: no-repeat; 
+}
+
+.navmenu li a:hover {
+	background-position: 5px 65%;
+}
+
+li#t-tastemakers a { 
+	background-image: url(../images/tastemakers.png);
+}
+
+li#t-blog a {
+	background-image: url(../images/blog.png);
+}
+
+li#t-vendors a {
+	background-image: url(../images/alist.png);
+}
+
+li#t-contribute a {
+	background-image: url(../images/contribute.png);
+}
+
+li#t-about a {
+	background-image: url(../images/about.png);
+}
+
+.navmenu li#t-tastemakers a,
+.navmenu li#t-blog a,
+.navmenu li#t-vendors a,
+.navmenu li#t-contribute a,
+.navmenu li#t-about a {
+	color: #34AC98;
+}
+
+.navmenu li#t-tastemakers a:hover,
+.navmenu li#t-blog a:hover,
+.navmenu li#t-vendors a:hover,
+.navmenu li#t-contribute a:hover,
+.navmenu li#t-about a:hover {
+	color: #EC6635;
+}
+
+/*----------SOCIAL----------*/
+
+.social {
+	margin-top: 60px;
+}
+
+.twitter,
+.facebook {
+	display: block;
+	margin-bottom: 32px;
+	padding-right: 20px;
+}
+
+.twitter h1,
+.facebook h1 {
+	margin: 0 0 9px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	font-size: .75em;
+	border-bottom: 1px dashed #E5E5E5;
+}
+
+.twitter p {
+	margin-bottom: 15px;
+	line-height: 1.75em;
+	font-size: .6825em;
+	font-style: italic;
+}
+
+.facebook p {
+	margin-bottom: 15px;
+	line-height: 1.75em;
+	font-size: .6825em;
+	font-style: italic;
+}
+
+.button {
+	width: 110px;
+	height: 24px;
+	padding: 4px 0 0 28px;
+	background: no-repeat 6px 6px;
+	border: solid #E5E5E5 1px;
+ 	border-radius: 5px;
+ 	padding: 4px 4px 4px 26px;
+}
+
+.twitter a.button {
+	background-image: url(../images/twitter.png); 
+}
+
+.facebook a.button { 
+	background-image: url(../images/facebook.png);
+}
+
+a.button:hover {
+	background-color: #EFF8F7;
+}
+
+
+/*-----------------CONTENT------------------*/
+
+.content {
+	box-sizing: border-box;
+	height: 100%px;
+}
+
+/*----------------- SLIDER------------------*/
+
+.slider {
+    height: 446px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.slider ul {
+	height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.slider li {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style-type: none;
+    position: relative;
+}
+
+.slide1 {
+    background-image: url(../images/slide1.jpg);
+}
+
+.slide2 {
+    background-image: url(../images/slide2.jpg);
+    display: none;
+}
+
+.slider3 {
+    background-image: url(../images/slide3.jpg);
+    display: none;
+}
+
+.slide4 {
+    background-image: url(../images/slide4.jpg);
+    display: none;
+}
+
+.sliderlink h1,
+.sliderlink h2 {
+	position: absolute;
+	font-style: italic;
+	right: 0;
+}
+
+.sliderlink h1 {
+	top: 280px;
+    padding: 10px 24px 15px;
+    color: #222;
+    background: #FFF;
+    font-size: 1.5em;
+}
+.sliderlink h2{
+    top: 340px;
+    padding: 8px 24px 12px;
+    color: #E9E9E9;
+    font-weight: normal;
+    font-size: 1em;
+    background: #111;
+}
+
+.author {
+	position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 4px 8px 6px;
+    font-size: .5em;
+    color: #555;
+    background: #F5F5F5;
+    background: rgba(255,255,255,.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.author a {
+	text-decoration: none;
+	color: #555;
+}
+.author a:hover {
+    color: #EC6635;
+}
+
+/*------------- FEATURE 1-4 -------------*/
+
+
+.feature {
+	background: rgba(217, 239, 236, 0.5);
+	box-sizing: border-box;
+	align-items: center;
+	border-left: 1px solid rgb(217, 239, 236);
+	border-right: 1px solid rgb(217, 239, 236);
+	height: 40px;
+}
+
+.feature a {
+    line-height: 2.2em;
+    color: #60BEAE;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.feature h3 {
+	padding: 0;
+	margin:0;
+	text-align: center;
+	font-size: 1em;
+}
+
+.featureactive {
+	background: rgb(217, 239, 236);
+}
+
+.feature a:hover {
+	color: #EC6635;
+}
+
+.featureactive a:hover {
+	color: #60BEAE;
+}
+
+/*-------------NEWSLETTER---------------*/
+
+.newsletter {
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+	min-height: 48px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	line-height: 1em;
+ 	border-top: 1px dashed #E5E5E5;
+ 	border-bottom: 1px dashed #E5E5E5;
+ 	background: url(../images/mail.png) no-repeat 18px 7px;
+}
+
+.newsletter p {
+	float: left;
+	width: 49%;
+	padding: 7px 24px 10px 66px;
+	font-size: .75em;
+	font-style: italic;
+}
+
+.newsletter form {
+	float: left;
+	display: block;
+	margin-top: 11px;
+}
+
+.newsletter input#email { 
+	width: 160px;
+    border: 1px solid;
+    border-color: #848484 #c1c1c1 #e1e1e1;
+    color: #000;
+    outline: 0;
+    padding: 2px 3px;
+    font-size: 13px;
+    font-family: Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+.newsletter input#email:hover {
+	   box-shadow: 0 0 3px 3px rgb(217, 239, 236);
+}
+
+.newsletter fieldset {
+	display: inline;
+}
+
+.submit {
+	-webkit-appearance: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+    background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+    border: 1px solid;
+    border-color: #ddd #bbb #999;
+    cursor: pointer;
+    color: #333;
+    font: bold 12px/1.3 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+    outline: 0;
+    overflow: visible;
+    padding: 3px 10px;
+    text-shadow: #fff 0 1px 1px;
+    width: auto;
+    margin-left: 15px;
+}
+
+.newsletter .submit:hover {
+	box-shadow: 0 0 3px 3px rgb(217, 239, 236);
+}
+
+.hide { 
+	display: none;
+}
+
+
+/* ---------RECENT BLOG NEWS--------- */
+
+#recent {
+	clear: both;
+	margin-bottom: 18px;
+	overflow: hidden;
+}
+
+#recent article {
+	box-sizing: border-box;
+	padding: 0 24px 25px 0;
+}
+
+#recent article img {
+	width: 150px;
+	background: #FFF;
+	overflow: hidden;
+}
+
+#recent article img:hover {
+	opacity: 0.75;
+}
+
+#recent article:nth-child(4) { 
+	margin-right: 0;
+}
+
+#recent article h1 {
+	margin: 10px 0 10px;
+	line-height: 1.3em;
+	font-size: 1em;
+}
+#recent article p {
+	font-size: .875em;
+	line-height: 1.45em;
+}
+#recent article p.meta {
+	margin-top: 10px;
+	color: #AAA;
+}
+
+/*------------- FOOTER --------------*/
+
+.footer {
+	border-top: 2px solid #E5E5E5;
+	min-height: 70px;
+}
+.footer-left {
+	float: left;
+	line-height: 1.5em;
+	font-size: .625em;
+	color: #AAA;
+	padding-top: 20px;
+}
+.footer-left a:hover {
+	color: #EC6635;
+}
+.footer-left p {
+	padding: 0;
+	margin: 0;
+}
+
+.footer-right {
+	float: right;
+	height: 50px;
+}
+
+.footer-right li {
+	float: right;
+	display: inline;
+	margin-left: 5px;
+	padding-top: 15px;
+}
+.footer-right li:nth-child(2) {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.footer-right  li a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-indent: -999em;
+	opacity: .4;
+	-webkit-transition: opacity .3s ease;
+	   -moz-transition: opacity .3s ease;
+	        transition: opacity .3s ease;
+}
+
+.footer-right li a:hover {
+	opacity: 1;
+}
+
+.twitter-footer a {
+	background: url(../images/twitter2.png) no-repeat 50% 1px;
+}
+
+.facebook-footer a {
+	background: url(../images/facebook2.png) no-repeat 50% 0;
+}
+
+.rss-footer a {
+	background: url(../images/rss.png) no-repeat 50% 0;
+}
+
+
+@media all and (min-width: 790px) and (max-width: 990px) {
+	/*---------GENERAL STUFF---------*/
+	.body {
+		padding: 20px 25px 0;
+	}
+
+	.social {
+		display: none;
+	}
+	
+	.col-12-md {
+		width: 100%;
+	}
+
+	.wrap {
+		width: 700px;
+	}
+	/*-------- LOGO ---------*/
+	h1#logo {
+		margin-top: -30px;
+		margin-bottom: 20px;
+	}
+	/*------- NAVIGATION MENU--------*/
+	.navmenu {
+		position: absolute;
+		top: 45px;
+		left: auto;
+		right: -50px;
+		width: 528px;
+		margin: 0;
+	}
+
+	.navmenu li {
+		display: inline-block;
+	}
+	.navmenu a {
+		display: inline; padding: 35px 15px 0 15px;
+	}
+	.navmenu li a {
+		background-position: 50% 0;
+	}
+	.navmenu li a:hover {
+		background-position: 50% 3px;
+	}
+}
+
+@media all and (min-width: 560px) and (max-width: 790px) {
+	/*---------GENERAL STUFF---------*/
+	.body {
+		padding: 1px 1px 0;
+	}
+
+	.social, .feature {
+		display: none;
+	}
+	
+	.col-12-md {
+		width: 100%;
+	}
+
+	.col-6-md {
+		width: 50%;
+	}
+
+	.wrap {
+		width: 480px;
+	}
+
+	/*-------- HEADER ---------*/
+	.header {		
+		margin: 20px 0;
+	}
+
+	/*-------- LOGO ---------*/
+	h1#logo {
+		margin-top: -30px;
+		margin-bottom: 0px;
+		margin-left: 20px;
+	}
+
+	/*------- NAVIGATION MENU--------*/
+	.navmenu {
+		position: absolute;
+		top: 45px;
+		left: auto;
+		right: 25px;
+		width: 315px;
+		height: 20px;
+		font-size: .75em;
+		background: transparent;
+		border-bottom: none;
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+		        box-shadow: none;
+	}
+
+	.navmenu ul {
+		position: absolute;
+		right: 0;
+	}
+
+	.navmenu li {
+		display: inline;
+		margin: 0;
+	}
+
+	.navmenu a {
+		float: left;
+		margin: 0 0 0 4px;
+		padding: 5px 5px 0 5px;		
+	}
+
+	#tastemakers-page li#t-recipes a, 
+	#blog-page li#t-blog a, 
+	#vendors-page li#t-marketplace a, 
+	#contribute-page li#t-contribute a, 
+	#about-page li#t-about a {
+		border-bottom: 2px solid #F5F5F5;
+	}
+
+	li#t-tastemakers a { 
+	background-image: none;
+	}
+
+	li#t-blog a {
+		background-image: none;
+	}
+
+	li#t-vendors a {
+		background-image: none;
+	}
+
+	li#t-contribute a {
+		background-image: none;
+	}
+
+	li#t-about a {
+		background-image: none;
+	}
+	/*--------ARTICLES----------*/
+	#recent article img {
+		width: 220px;
+	}
+	/*-----------SLIDER--------*/
+	.slider {
+	    height: 310px;
+	}
+
+	.sliderlink h1 {
+		position: absolute;
+		top: 220px;
+		left: 0px;
+	    padding: 5px 15px 10px;
+		padding-left: 30px;
+	    color: #222;
+	    background: #FFF;
+	    font-size: 1.5em;
+	    width: 100%;
+	    opacity: 0.8;
+	}
+
+	.sliderlink h2{
+	    top: 274px;
+	    position: absolute;
+	    left: 0px;
+	    padding: 8px 24px 12px;
+	    color: #E9E9E9;
+	    font-weight: normal;
+	    font-size: 1em;
+	    background: #111;
+	    width: 100%;
+	    opacity: 0.8;
+	}
+
+	.author {
+		position: absolute;
+	    right: 10px;
+	    top: 320px;
+	    color: black;
+	}
+
+	.newsletter {
+	padding-bottom: 15px;
+	}
+
+	.newsletter input#email { 
+	width: 340px;
+	}
+
+	.newsletter form {
+		padding-left: 15px;
+	}
+}
+
+
+@media all and (max-width: 560px) {
+	
+	body {
+		padding: 0;
+
+	}
+
+	.social, .feature {
+		display: none;
+	}
+	
+	.col-12-md {
+		width: 100%;
+	}
+
+	.col-12-sm {
+		width: 100%;
+	}
+
+	.wrap {
+		width: 480px;
+	}
+
+		/*-------- HEADER ---------*/
+	.header {		
+		margin: 20px 0;
+	}
+
+	/*-------- LOGO ---------*/
+	h1#logo {
+		margin: 0 auto;
+		margin-bottom: 0px;
+		margin-top: 70px;
+	}
+
+	/*------- NAVIGATION MENU--------*/
+	.navmenu {
+		position: absolute;
+		top: 45px;
+		left: auto;
+		right: 100px;
+		width: 315px;
+		height: 20px;
+		font-size: .75em;
+		background: transparent;
+		border-bottom: none;
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+		        box-shadow: none;
+	}
+
+	.navmenu ul {
+		position: absolute;
+		border-bottom: 2px solid #E5E5E5;
+		right: 0;
+	}
+
+	.navmenu li {
+		display: inline;
+		margin: 0;
+	}
+
+	.navmenu a {
+		float: left;
+		margin: 0 0 0 4px;
+		padding: 5px 5px 0 5px;		
+	}
+
+	#tastemakers-page li#t-recipes a, 
+	#blog-page li#t-blog a, 
+	#vendors-page li#t-marketplace a, 
+	#contribute-page li#t-contribute a, 
+	#about-page li#t-about a {
+		border-bottom: 2px solid #F5F5F5;
+	}
+
+	li#t-tastemakers a { 
+	background-image: none;
+	}
+
+	li#t-blog a {
+		background-image: none;
+	}
+
+	li#t-vendors a {
+		background-image: none;
+	}
+
+	li#t-contribute a {
+		background-image: none;
+	}
+
+	li#t-about a {
+		background-image: none;
+	}
+	/*--------ARTICLES----------*/
+	#recent article img {
+		width: 350px;
+		padding-left: 50px;
+	}
+	/*-----------SLIDER--------*/
+	.slider {
+	    height: 310px;
+	}
+
+	.sliderlink h1 {
+		position: absolute;
+		top: 220px;
+		left: 0px;
+	    padding: 5px 15px 10px;
+		padding-left: 30px;
+	    color: #222;
+	    background: #FFF;
+	    font-size: 1.5em;
+	    width: 100%;
+	    opacity: 0.8;
+	}
+
+	.sliderlink h2{
+	    top: 274px;
+	    position: absolute;
+	    left: 0px;
+	    padding: 8px 24px 12px;
+	    color: #E9E9E9;
+	    font-weight: normal;
+	    font-size: 1em;
+	    background: #111;
+	    width: 100%;
+	    opacity: 0.8;
+	}
+
+	.author {
+		position: absolute;
+	    right: 10px;
+	    top: 320px;
+	    color: black;
+	}
+
+	.newsletter {
+		padding-bottom: 15px;
+	}
+
+	.newsletter input#email { 
+		width: 170px;
+	}
+
+	.newsletter form {
+		padding-left: 15px;
+	}
+}
